@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thick_app/components/drawer/custom_drawer.dart';
+import 'package:thick_app/screens/categories/list-categories.dart';
+import 'package:thick_app/screens/notes/main-note.dart';
 import 'package:thick_app/views/top/popup-menu.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,14 +19,8 @@ class HomeScreen extends StatelessWidget {
           title:Text("nkb"),
           actions: MyAppBarActions(context)),
       drawer: const CustomDrawer(),
-      body: const Center(
-        child: Text(
-          'Collasable drawer',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
-          ),
-        ),
+      body: SafeArea(
+        child: NoteView(),
       ),
     );
   }
